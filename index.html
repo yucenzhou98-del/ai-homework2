@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>職人精品手沖咖啡旅程 - AI 導演思維作業</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .glass-panel {
+            background: rgba(25, 25, 25, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="relative selection:bg-amber-500 selection:text-black">
+
+    <!-- HUD 導航列 (快速跳轉按鈕) -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-amber-900/30 px-6 py-4 flex justify-between items-center">
+        <h1 class="text-amber-400 font-bold tracking-wider text-lg">☕ Coffee Scrollytelling</h1>
+        <nav class="hidden md:flex gap-6 text-sm">
+            <a href="#phase1" class="hover:text-amber-400 transition">01. 生豆挑選</a>
+            <a href="#phase2" class="hover:text-amber-400 transition">02. 烘焙曲線</a>
+            <a href="#phase3" class="hover:text-amber-400 transition">03. 研磨注水</a>
+            <a href="#phase4" class="hover:text-amber-400 transition">04. 風味綻放</a>
+        </nav>
+    </header>
+
+    <!-- Hero 區塊與 AI 導演提示詞展示 -->
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-600 via-transparent to-transparent"></div>
+        <div class="z-10 max-w-3xl space-y-6">
+            <span class="text-amber-400 tracking-widest uppercase text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/30">AI 導演思維作業</span>
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight">職人精品手沖咖啡旅程</h2>
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                結合前端 GSAP 互動微動效與電影級鏡語描述，體驗零延遲、高畫質的現代網頁動態美學[span_1](start_span)[span_1](end_span)。
+            </p>
+            
+            <!-- 步驟二要求的 AI 導演提示詞區塊 -->
+            <div class="glass-panel text-left p-5 rounded-xl text-xs md:text-sm space-y-2 mt-8 shadow-2xl">
+                <div class="text-amber-400 font-bold flex items-center gap-2">
+                    <span>🎬 5 秒 Hero 區塊「AI 導演提示詞」</span>
+                </div>
+                <p class="text-gray-300 font-mono bg-black/40 p-3 rounded border border-white/5">
+                    Slow 35mm dolly-in shot at eye level. A ceramic coffee dripper with delicate dark roast grounds receiving a gentle spiral pour of steaming water. Minimalist concrete counter, warm morning golden hour backlighting, soft steam motes floating in air. Shot on Arri Alexa, cinematic 4K, 24fps[span_2](start_span)[span_2](end_span).
+                </p>
+            </div>
+        </div>
+        <div class="absolute bottom-8 animate-bounce text-amber-400 text-sm">↓ 往下滾動體驗互動微動效</div>
+    </section>
+
+    <!-- Scrollytelling 內容區塊 (Phase 01 ~ Phase 04) -->
+    <main class="relative">
+
+        <!-- Phase 01 -->
+        <section id="phase1" class="h-screen flex items-center justify-center px-6 snap-section">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transform transition hover:border-amber-500/50">
+                <span class="text-amber-400 font-mono text-sm">Phase 01</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">嚴選生豆挑選 (Bean Selection)</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    從產地莊園的微氣候開始，歷經人工手選，剔除瑕疵豆。確保每一顆咖啡豆都具備完美的密度與純淨的風味基底。
+                </p>
+            </div>
+        </section>
+
+        <!-- Phase 02 -->
+        <section id="phase2" class="h-screen flex items-center justify-center px-6 snap-section">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transform transition hover:border-amber-500/50">
+                <span class="text-amber-400 font-mono text-sm">Phase 02</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">精準烘焙曲線 (Roasting Curve)</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    掌控一爆與二爆之間的微妙化學變化。透過導熱與風壓的調節，完美釋放花香、果酸或堅果的可可尾韻。
+                </p>
+            </div>
+        </section>
+
+        <!-- Phase 03 -->
+        <section id="phase3" class="h-screen flex items-center justify-center px-6 snap-section">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transform transition hover:border-amber-500/50">
+                <span class="text-amber-400 font-mono text-sm">Phase 03</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">研磨與黃金注水 (Pour Over)</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    以 92 度黃金水溫進行悶蒸，採螺旋注水法柔順萃取。精準控制秒數與水流細緻度，避免雜味過度釋放。
+                </p>
+            </div>
+        </section>
+
+        <!-- Phase 04 -->
+        <section id="phase4" class="h-screen flex items-center justify-center px-6 snap-section">
+            <div class="max-w-xl glass-panel p-8 rounded-2xl shadow-xl transform transition hover:border-amber-500/50">
+                <span class="text-amber-400 font-mono text-sm">Phase 04</span>
+                <h3 class="text-3xl font-bold text-white mt-2 mb-4">風味完美綻放 (Flavor Profile)</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    當入口的瞬間，明亮的柑橘香氣與溫润的焦糖甜感在舌尖交織，完成一場兼具科學與美學的職人品味旅程。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾創作心得簡述區塊 (50~100字) -->
+    <footer class="py-16 px-6 glass-panel border-t border-amber-900/30 text-center">
+        <div class="max-w-2xl mx-auto space-y-4">
+            <h4 class="text-amber-400 font-bold text-lg">✍️ 50~100 字創作心得簡述</h4>
+            <p class="text-gray-300 text-sm leading-relaxed bg-black/30 p-4 rounded-xl border border-white/5">
+                這次作業透過 AI 導演提示詞公式，精準定義了鏡頭運鏡與光影細節，並結合 GSAP 打造流暢的 Scrollytelling 互動體驗。相比傳統沉重的背景影片，向量與微動效不僅載入極快，更展現了極具質感的深色科技品味。
+            </p>
+            <p class="text-gray-500 text-xs">© 2026 AI Director & Scrollytelling Workshop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP 動畫互動腳本 -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 為每一個階段加入淡入與浮現的滾動微動效
+        document.querySelectorAll('main section').forEach((section) => {
+            gsap.fromTo(section.querySelector('div'), 
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 75%",
+                        end: "top 40%",
+                        scrub: 1 // 達成平滑滾動與物理阻尼感
+                    }
+                }
+            );
+        });
+    </script>
+</body>
+</html>
